@@ -28,8 +28,7 @@ module.exports = async (req, res) => {
         (function() {
           function recieveMessage(e) {
             console.log("recieveMessage %o", e);
-            
-            // send message to main window with the app
+    
             window.opener.postMessage(
               'authorization:github:success:${JSON.stringify(postMsgContent)}', 
               e.origin
