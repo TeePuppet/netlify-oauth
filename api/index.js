@@ -14,9 +14,9 @@ app.get('/', (req, res) => {
 });
 
 // NetlifyCMS expects to land on a page at /auth.
-app.get('/auth', (req, res) => res.redirect(authUrl));
+app.get('/api/auth', (req, res) => res.redirect(authUrl));
 
-app.get('/callback', async (req, res) => {
+app.get('/api/callback', async (req, res) => {
 	const data = {
 		code: req.query.code,
 		client_id,
